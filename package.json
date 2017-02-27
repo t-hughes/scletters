@@ -15,5 +15,14 @@
     "express": "^4.14.0",
     "express-session": "^1.14.2",
     "massive": "^2.5.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t-hughes/scletters.git"
+  },
+  "bugs": {
+    "url": "https://github.com/t-hughes/scletters/issues"
+  },
+  "homepage": "https://github.com/t-hughes/scletters#readme"
 }

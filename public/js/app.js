@@ -1,4 +1,4 @@
-var app = angular.module('santaLettersApp', ['ui.router', 'ngMaterial', 'ngAnimate', 'ngSanitize', 'jkAngularCarousel']);
+var app = angular.module('santaLettersApp', ['ui.router', 'ngMaterial', 'ngAnimate', 'ngSanitize']);
 
 app.config(function($urlRouterProvider, $stateProvider) {
 
