@@ -16,7 +16,8 @@ app.config(function($urlRouterProvider, $stateProvider) {
                 footer: {
                     templateUrl: 'templates/footer.html'
                 }
-            }
+            },
+            controller: 'carouselCtrl'
         })
 
         .state('letterTemplates', {

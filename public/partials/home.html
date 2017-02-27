@@ -27,6 +27,10 @@
             <p class="section-description">Integer elementum massa at nulla placerat varius. Suspendisse in libero risus, in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.</p>
         </div>
 
+        <div ng-controller="carouselCtrl">
+          <zai-carousel img-srcs="{{imgSrcs}}" interval="{{interval}}"></zai-carousel>
+        </div>
+
         <!-- TODO: ADD some image carousel to show the product/(letters) right when users visit the page it needs to have a brief description of the product with pictures of the letters and Nice List certificates -->
 
         <div layout="row" layout-padding layout-margin layout-align="center center">
@@ -99,9 +103,3 @@
     </div>
     </md-content>
 </section>
-
-    <div class="row">
-        <div class="col-lg-1 col-centered">
-            <button ui-sref="letterTemplates" class="btn btn-danger">Get Started</button>
-        </div>
-    </div>
