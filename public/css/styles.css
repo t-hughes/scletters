@@ -234,13 +234,13 @@ button.get-started-btn.red {
     z-index: -1;
  }
 
-.section-title-wrapper-tetimonial {
+.section-title-tetimonial-wrapper {
     text-align: center;
     display: block;
     color: #FFF;
     text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.6);
     font-family: 'Raleway', sans-serif;
-    margin-bottom: 50px;
+    margin-bottom: 125px;
     margin-top: 75px;
 }
 
@@ -260,7 +260,7 @@ button.get-started-btn.red {
   border: 1px solid;
 }
 
-.testimonal-quote-wrapper {
+.testimonal-quote {
     display: inline-block;
     text-align: justify;
     color: #FFF;
