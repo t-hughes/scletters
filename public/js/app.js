@@ -15,7 +15,9 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
 
     $urlRouterProvider.otherwise('/home');
 
-    $stateProvider.state('home', {
+    $stateProvider
+
+    .state('home', {
         url: '/home',
         views: {
             content: {
@@ -27,7 +29,9 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
             }
         },
         controller: 'carouselCtrl'
-    }).state('letterTemplates', {
+    })
+
+    .state('letterTemplates', {
         url: '/letterTemplates',
         views: {
             nav: {
@@ -41,7 +45,9 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
             }
         },
         controller: 'letterTemplateCtrl'
-    }).state('letterCreate', {
+    })
+
+    .state('letterPersonalization', {
         url: '/letterWorkshop',
         views: {
             nav: {
@@ -51,11 +57,13 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
                 templateUrl: 'templates/footer.html'
             },
             content: {
-                templateUrl: 'partials/letterCreate.html'
+                templateUrl: 'partials/letterPersonalization.html'
             }
         },
-        controller: 'letterCreateCtrl'
-    }).state('letterApproval', {
+        controller: 'letterPersonalizationCtrl'
+    })
+
+    .state('letterApproval', {
         url: '/letterApproval',
         views: {
             nav: {
@@ -65,11 +73,13 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
                 templateUrl: 'templates/footer.html'
             },
             content: {
-                templateUrl: 'partials/letterApproval.html'
+                templateUrl: 'partials/letterPersonalization.html'
             }
         },
-        controller: 'letterWorkshopCtrl'
-    }).state('santasShop', {
+        // controller: 'letterWorkshopCtrl'
+    })
+
+    .state('santasShop', {
         url: '/santasShop',
         views: {
             nav: {
@@ -83,7 +93,9 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
             }
         },
         controller: 'santasShopCtrl'
-    }).state('productDetails', {
+    })
+
+    .state('productDetails', {
         url: '/productDetails/:id',
         views: {
             nav: {
@@ -97,7 +109,9 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
             }
         },
         controller: 'productDetailsCtrl'
-    }).state('userCart', {
+    })
+
+    .state('userCart', {
         url: '/userCart',
         views: {
             nav: {
@@ -111,7 +125,9 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
             }
         },
         controller: 'userCartCtrl'
-    }).state('userCheckout', {
+    })
+
+    .state('userCheckout', {
         url: '/userCheckout',
         views: {
             nav: {
@@ -125,7 +141,9 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
             }
         },
         controller: 'letterWorkshopCtrl'
-    }).state('about', {
+    })
+
+    .state('about', {
         url: '/about',
         views: {
             nav: {
@@ -138,7 +156,9 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
                 templateUrl: 'partials/about.html'
             }
         }
-    }).state('contact', {
+    })
+
+    .state('contact', {
         url: '/contact',
         views: {
             nav: {
@@ -151,7 +171,9 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
                 templateUrl: 'partials/contact.html'
             }
         }
-    }).state('howItWorks', {
+    })
+
+    .state('howItWorks', {
         url: '/howItWorks',
         views: {
             nav: {

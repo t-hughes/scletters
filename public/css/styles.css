@@ -1,5 +1,4 @@
 /*ANGULAR MATERIAL CSS*/
-
 /*BODY/HTML*/
 *, *:before, *:after {
     box-sizing: border-box;
@@ -11,12 +10,140 @@ body, html {
 }
 /*BODY/HTML END*/
 
+/*//////////////////////////////*/
+/*//////////////////////////////*/
+/*//////////////////////////////*/
 
-/*HOME HEADER/TOOLBAR*/
+/*BUTTONS START*/
+
+button.get-started-btn,
+button.to-letterPersonalization-btn,
+button.to-home-btn {
+  font-family: 'Raleway', sans-serif;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  cursor: pointer;
+  padding: 9px 15px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 14px;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+button.get-started-btn span,
+button.to-letterPersonalization-btn span,
+button.to-home-btn span {
+  display: inline-block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.8;
+}
+
+button.get-started-btn i,
+button.to-letterPersonalization-btn i {
+  font-size: 18px;
+  right: 8px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+button.to-home-btn i {
+  font-size: 18px;
+  left: 8px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+button.get-started-btn:hover span,
+button.get-started-btn.hover span,
+button.to-letterPersonalization-btn:hover span,
+button.to-letterPersonalization-btn:hover span {
+  -webkit-transform: translate3d(-10px, 0px, 0px);
+  transform: translate3d(-10px, 0px, 0px);
+  opacity: 1;
+}
+
+button.to-home-btn:hover span,
+button.to-home-btn:hover span {
+  -webkit-transform: translate3d(10px, 0px, 0px);
+  transform: translate3d(10px, 0px, 0px);
+  opacity: 1;
+}
+
+button.get-started-btn:hover i,
+button.get-started-btn.hover i,
+button.to-letterPersonalization-btn:hover i,
+button.to-letterPersonalization-btn:hover i,
+button.to-home-btn:hover i,
+button.to-home-btn:hover i
+ {
+  opacity: 0.8;
+}
+
+button.get-started-btn:active span,
+button.to-letterPersonalization-btn:active span {
+  -webkit-transform: translate3d(-14px, 0px, 0px);
+  transform: translate3d(-14px, 0px, 0px);
+}
+
+button.to-home-btn:active span {
+  -webkit-transform: translate3d(14px, 0px, 0px);
+  transform: translate3d(14px, 0px, 0px);
+}
+
+button.get-started-btn:active i,
+button.to-letterPersonalization-btn:active i {
+  right: 18px;
+}
+
+button.to-home-btn:active i {
+    left: 18px;
+}
+
+button.get-started-btn.red,
+button.to-letterPersonalization-btn.red {
+  background-color: #D9534F;
+}
+
+button.to-home-btn.green {
+    background-color: #196955;
+}
+
+
+/*BUTTONS END*/
+
+/*//////////////////////////////*/
+/*//////////////////////////////*/
+/*//////////////////////////////*/
+
+
+/*HOME START*/
+
+/*//////////////////////////////*/
+
+/*HEADER/TOOLBAR START*/
+
 .md-toolbar-tools {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 35px;
+}
+
+.md-tools {
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
 }
 
 [md-header-title] {
@@ -96,10 +223,14 @@ body, html {
   float: right;
 }
 
-/*HOME HEADER/TOOLBAR END*/
+/*HEADER/TOOLBAR END*/
 
+/*//////////////////////////////*/
+/*//////////////////////////////*/
+/*//////////////////////////////*/
 
-/*OUR LETTERS HOME SECTION*/
+/*OUR LETTERS SECTION START*/
+
 .section-title-wrapper {
     text-align: center;
     display: block;
@@ -148,70 +279,13 @@ body, html {
     font-family: 'Raleway', sans-serif;
 }
 
-button.get-started-btn {
-  font-family: 'Raleway', Arial, sans-serif;
-  border: none;
-  background-color: #000;
-  border-radius: 5px;
-  color: #FFF;
-  cursor: pointer;
-  padding: 10px 30px;
-  display: inline-block;
-  margin: 15px 30px;
-  text-transform: uppercase;
-  line-height: 1.5em;
-  font-weight: 600;
-  font-size: 1em;
-  outline: none;
-  position: relative;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
+/*OUR LETTERS SECTION END*/
 
-button.get-started-btn span {
-  display: inline-block;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: 0.8;
-}
+/*//////////////////////////////*/
+/*//////////////////////////////*/
+/*//////////////////////////////*/
 
-button.get-started-btn i {
-  font-size: 21px;
-  right: 22px;
-  position: absolute;
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-button.get-started-btn:hover span,
-button.get-started-btn.hover span {
-  -webkit-transform: translate3d(-10px, 0px, 0px);
-  transform: translate3d(-10px, 0px, 0px);
-  opacity: 1;
-}
-
-button.get-started-btn:hover i,
-button.get-started-btn.hover i {
-  opacity: 0.8;
-}
-
-button.get-started-btn:active span {
-  -webkit-transform: translate3d(-14px, 0px, 0px);
-  transform: translate3d(-14px, 0px, 0px);
-}
-
-button.get-started-btn:active i {
-  right: 18px;
-}
-
-button.get-started-btn.red {
-  background-color: #D9534F;
-}
-
-/*OUR LETTERS HOME SECTION END*/
-
-/*CUSTOMER TESTIMONIALS HOME SECTION*/
+/*CUSTOMER TESTIMONIALS SECTION START*/
 
 .section-testimonial-image {
     background-image:url('../imgs/slBackgroundHome2.jpg');
@@ -269,10 +343,19 @@ button.get-started-btn.red {
 }
 
 
-/*CUSTOMER TESTIMONIALS HOME SECTION END*/
+/*CUSTOMER TESTIMONIALS SECTION END*/
 
+/*//////////////////////////////*/
+/*//////////////////////////////*/
+/*//////////////////////////////*/
 
-/*FOOTER*/
+/*HOME END*/
+
+/*//////////////////////////////*/
+/*//////////////////////////////*/
+/*//////////////////////////////*/
+
+/*FOOTER START*/
 
 .footer {
     font-family: 'Montserrat', sans-serif;
@@ -315,9 +398,72 @@ button.get-started-btn.red {
 
 /*FOOTER END*/
 
+/*//////////////////////////////*/
+/*//////////////////////////////*/
+/*//////////////////////////////*/
+
+/*LETTER TEMPLATES START*/
+
+/*//////////////////////////////*/
+
+/*TABS START*/
+
+.tabsdemoDynamicTabs md-content {
+  background-color: transparent !important;
+}
+ .tabsdemoDynamicTabs md-content md-tabs {
+    /*border: 1px solid #e1e1e1; */
+}
+.tabsdemoDynamicTabs md-content md-tabs md-tab-content {
+    background: #f6f6f6;
+}
+.tabsdemoDynamicTabs md-content md-tabs md-tabs-canvas {
+    background: white;
+}
+ .tabsdemoDynamicTabs md-content h1:first-child {
+    margin-top: 0;
+}
+.tabsdemoDynamicTabs md-input-container {
+    padding-bottom: 0;
+}
+.tabsdemoDynamicTabs .remove-tab {
+    margin-bottom: 40px;
+}
+.tabsdemoDynamicTabs .demo-tab > div > div {
+    padding: 25px;
+    box-sizing: border-box;
+}
+.tabsdemoDynamicTabs .edit-form input {
+    width: 100%;
+}
+.tabsdemoDynamicTabs md-tabs {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.tabsdemoDynamicTabs md-tab[disabled] {
+    opacity: 0.5;
+}
+.tabsdemoDynamicTabs label {
+    text-align: left;
+}
+.tabsdemoDynamicTabs .long > input {
+    width: 264px;
+}
+.tabsdemoDynamicTabs .md-button.add-tab {
+    transform: translateY(5px);
+}
+
+md-tabs.md-default-theme md-ink-bar, md-tabs md-ink-bar {
+    color: #D9534F !important;
+    background-color: #D9534F !important;
+}
+
+/*TABS END*/
 
 
 
+
+
+  /*LETTER TEMPLATES END*/
 
 
 /*ANGULAR MATERIAL CSS END*/

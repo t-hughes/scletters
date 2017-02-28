@@ -1,13 +1,38 @@
 <!-- TODO: Add functionality for users to be able to select multiple templates that get displayed in a grid when they go to the next page. -->
-<div id="page-container" class="container">
-    <div class="row">
-        <div class="title-area text-center">
-            <h2 class="title-modern">Letter Templates</h2>
-            <div class="separator separator-danger text-center">✻</div>
-            <p class="description text-center">Choose From Our Selection Of Letter Templates To Begin The Letter Personalization Process.</p>
+
+<section>
+
+        <div class="section-title-wrapper">
+            <h2 class="section-title">Letter Templates</h2>
+        <div class="separator separator-red">✻</div>
+            <p class="section-description">Choose From Our Selection Of Letter Templates To Begin The Letter Personalization Process.</p>
         </div>
+
+<div ng-controller="letterTemplateCtrl" class="sample tabsdemoDynamicTabs">
+    <md-content class="md-padding">
+        <md-tabs md-selected="selectedIndex" md-border-bottom="" md-center-tabs>
+          <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
+            <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
+              <div ng-bind="tab.letterHeader"></div>
+              <div ng-bind="tab.paragraphOne"></div>
+              <div ng-bind="tab.paragraphTwo"></div>
+              <div ng-bind="tab.paragraphThree"></div>
+              <div ng-bind="tab.paragraphFour"></div>
+              <div ng-bind="tab.letterFooter"></div>
+              <div ng-bind="tab.letterSigning"></div>
+          </md-tab>
+      </div>
+        </md-tabs>
+    </md-content>
+
+    <md-content>
+    <div layout="row" layout-margin layout-padding layout-align="center">
+        <button class="to-home-btn green" ui-sref="home"><i class="ion-android-arrow-back"></i><span>Home</span></button>
+        <button class="to-letterPersonalization-btn red" ui-sref="letterPersonalization"><span>Letter Personalization</span><i class="ion-android-arrow-forward"></i></button>
     </div>
-    <div id="letterTemplates-container">
+    </md-content>
+</div>
+</section>
 
 
         <!-- <div class="letter">
@@ -44,13 +69,6 @@
                 </div>
             </div>
         </div> -->
-
-        <div class="btn-container">
-            <button ui-sref="home" class="btn btn-success btn-to-home">Home</button>
-            <button ui-sref="letterWorkshop" class="btn btn-danger btn-to-letterWorkshop">Letter Personalization</button>
-        </div>
-    </div>
-</div>
 
 <!-- TODO: Decide how to save the user's template selection -->
 <!-- TODO: Include a dropdown somewhere that allows users to choose a language for their letter -->

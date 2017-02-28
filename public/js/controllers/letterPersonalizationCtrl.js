@@ -1,10 +1,10 @@
-app.controller('letterCreateCtrl', function($scope, $state, letterCreateSrv) {
+app.controller('letterPersonalizationCtrl', function($scope, $state, letterPersonalizationSrv) {
 
 //User Deets and Delivery Form Info Sending saved in the service until it is sent to the DB on the last step.
 
 // $scope.saveFinalCustomer = function (data){
 //   $scope.saveCustomerData(data);
-//   letterCreateSrv.createFinalCustomer();
+//   letterPersonalizationSrv.createFinalCustomer();
 // };
 
 
@@ -12,7 +12,7 @@ app.controller('letterCreateCtrl', function($scope, $state, letterCreateSrv) {
 
 $scope.getOrderData = function() {
   console.log('FETCHING ORDER DATA FROM SERVICE...');
-  $scope.order = letterCreateSrv.getOrderData();
+  $scope.order = letterPersonalizationSrv.getOrderData();
 
   if($scope.order[1] != null) {
     console.log('letterData:', $scope.order[1]);
@@ -27,13 +27,13 @@ $scope.getOrderData = function() {
 
 $scope.savePackageData = function(data) {
   console.log('SENDING PACKAGE DATA TO SERVICE...', data);
-  letterCreateSrv.savePackageData(data);
+  letterPersonalizationSrv.savePackageData(data);
 };
 
 
 $scope.saveOrderData = function(data) {
   console.log('SENDING ORDER DATA TO SERVICE...', data);
-  letterCreateSrv.saveOrderData(data);
+  letterPersonalizationSrv.saveOrderData(data);
 };
 
 $scope.getOrderData();
