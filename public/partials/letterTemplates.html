@@ -8,30 +8,123 @@
             <p class="section-description">Choose From Our Selection Of Letter Templates To Begin The Letter Personalization Process.</p>
         </div>
 
-<div ng-controller="letterTemplateCtrl" class="sample tabsdemoDynamicTabs">
+
+<div layout="row" layout-padding layout-margin layout-wrap="" layout-align="center">
+        <img src="http://placehold.it/150x150" lbimage="./imgs/template1.png" md-lightbox md-lightbox-title="Template 1"  />
+        <img src="http://placehold.it/150x150" lbimage="./imgs/template2.png" md-lightbox md-lightbox-title="Template 2"  />
+        <img src="http://placehold.it/150x150" lbimage="./imgs/template3.png" md-lightbox md-lightbox-title="Template 3"  />
+        <img src="http://placehold.it/150x150" lbimage="./imgs/template4.png" md-lightbox md-lightbox-title="Template 4"  />
+</div>
+
+
+
+<md-content layout="row" layout-padding layout-margin layout-align="center">
+  <form name="projectForm">
+
+    <div layout="row">
+      <md-input-container flex="50">
+        <label>Child's Name</label>
+        <input required="" name="childsName" ng-model="project.childsName">
+        <div ng-messages="projectForm.childsName.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container flex="50">
+        <label>Child's Gender</label>
+        <md-select required="" name="type" ng-model="project.childsGender">
+          <md-option value="Girl">Girl</md-option>
+          <md-option value="Boy">Boy</md-option>
+          <md-option value="Kid">Kid</md-option>
+        </md-select>
+      </md-input-container>
+    </div>
+
+    <md-input-container class="md-block">
+      <label>A gift they have asked for</label>
+      <input required="" name="childGift" ng-model="project.childGift">
+
+      <div ng-messages="projectForm.childGift.$error" role="alert">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+
+    <md-input-container class="md-block">
+      <label>Something the child needs to work on</label>
+      <input required="" name="childImprove" ng-model="project.childImprove">
+
+      <div ng-messages="projectForm.childImprove.$error">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+
+<div layout="row">
+    <md-input-container flex="50">
+      <label>Child's City</label>
+      <input required="" name="childCity" ng-model="project.childCity">
+
+      <div ng-messages="projectForm.childCity.$error">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+
+    <md-input-container flex="50">
+      <label>Letter Template</label>
+      <md-select required="" name="type" ng-model="project.childsGender">
+        <md-option value="Letter Template 1">Template 1</md-option>
+        <md-option value="Letter Template 2">Template 2</md-option>
+        <md-option value="Letter Template 3">Template 3</md-option>
+        <md-option value="Letter Template 4">Template 4</md-option>
+      </md-select>
+    </md-input-container>
+</div>
+
+    <div>
+      <md-button type="submit">Submit</md-button>
+    </div>
+
+  </form>
+</md-content>
+
+<!-- <div ng-controller="letterTemplateCtrl" class="letterTemplateTabs" layout="row" layout-align="center">
     <md-content class="md-padding">
-        <md-tabs md-selected="selectedIndex" md-border-bottom="" md-center-tabs>
+        <md-tabs md-selected="selectedIndex" md-border-bottom="" md-center-tabs md-dynamic-height="">
           <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
-            <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
-              <div ng-bind="tab.letterHeader"></div>
-              <div ng-bind="tab.paragraphOne"></div>
-              <div ng-bind="tab.paragraphTwo"></div>
-              <div ng-bind="tab.paragraphThree"></div>
-              <div ng-bind="tab.paragraphFour"></div>
+            <div class="letter tab{{$index%4}}" style="padding: 25px; text-align: justify;">
+              <div class="letter-head" ng-bind="tab.letterHeader"></div>
+              <br />
+              <div  ng-bind="tab.paragraphOne"></div>
+              <br />
+              <div  ng-bind="tab.paragraphTwo"></div>
+              <br />
+              <div  ng-bind="tab.paragraphThree"></div>
+              <br />
+              <div  ng-bind="tab.paragraphFour"></div>
+              <br />
               <div ng-bind="tab.letterFooter"></div>
+              <br />
               <div ng-bind="tab.letterSigning"></div>
           </md-tab>
+
+          <div class="product-quantity">
+              <label for="product-quantity-input" class="product-quantity-label">Qty</label>
+              <div class="product-quantity-subtract">
+                  <i class="fa fa-chevron-left"></i>
+              </div>
+              <div>
+                  <input type="text" id="product-quantity-input" placeholder="0" value="0" />
+              </div>
+              <div class="product-quantity-add">
+                  <i class="fa fa-chevron-right"></i>
+              </div>
+          </div>
       </div>
         </md-tabs>
-    </md-content>
 
-    <md-content>
-    <div layout="row" layout-margin layout-padding layout-align="center">
         <button class="to-home-btn green" ui-sref="home"><i class="ion-android-arrow-back"></i><span>Home</span></button>
         <button class="to-letterPersonalization-btn red" ui-sref="letterPersonalization"><span>Letter Personalization</span><i class="ion-android-arrow-forward"></i></button>
-    </div>
     </md-content>
-</div>
+</div> -->
 </section>
 
 
@@ -52,21 +145,9 @@
                     kinds of cookies! Well I need to get back to my workshop and help the Elves. Keep up the good work <span class="highlight-red">&LT;Child's Name&GT;</span> and have a Very Merry Christmas!</p>
 
                 <p>Ho Ho Ho,</p>
-                <br />
+
                 <p>Santa Claus</p>
 
-                <div class="product-quantity">
-                    <label for="product-quantity-input" class="product-quantity-label">Qty</label>
-                    <div class="product-quantity-subtract">
-                        <i class="fa fa-chevron-left"></i>
-                    </div>
-                    <div>
-                        <input type="text" id="product-quantity-input" placeholder="0" value="0" />
-                    </div>
-                    <div class="product-quantity-add">
-                        <i class="fa fa-chevron-right"></i>
-                    </div>
-                </div>
             </div>
         </div> -->
 

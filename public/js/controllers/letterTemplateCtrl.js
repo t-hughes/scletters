@@ -6,7 +6,7 @@
     var tabs = [
           {
               title: 'Template 1',
-              
+
               letterHeader: "Dear (name),",
 
               paragraphOne: "Ho Ho Ho! Merry Christmas! The Elves and I are busy making presents for all of the good boys and girls around the world. You have been such a good (boy/girl) this year, so I wanted to take a minute to write you a letter.",
