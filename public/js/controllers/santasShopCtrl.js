@@ -1,17 +1,14 @@
-app.controller('santasShopCtrl', function($scope, $state, santasShopSrv, userCartSrv) {
+app.controller('santasShopCtrl', function($scope, santasShopSrv) {
+
 
     $scope.getAllProducts = santasShopSrv.getAllProducts()
-          .then(function(response) {
-            $scope.products = response.data;
-        });
+        .then(function(response) {
+          $scope.products = response.data;
+      });
 
-        $scope.productQty = 1;
-
-        // Send Product to Cart
-        $scope.addToCart = (item) => {
-          item.productQty = $scope.productQty;
-          $scope.cartstorage = userCartSrv.cartStorage(item);
-        };
-
+     //This adds the red border and gray background when the package is selected.
+    //    $scope.activeTemplate = function(index) {
+    //        $scope.isSelected = index;
+    //    };
 
 });

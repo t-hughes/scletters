@@ -1,0 +1,22 @@
+<section>
+    <div class="section-title-wrapper">
+        <h2 class="section-title">Santa's Shop</h2>
+    <div class="separator separator-red">✻</div>
+        <p class="section-description">See all items below.</p>
+    </div>
+
+    <div  ng-repeat="product in products">
+
+  <div >
+    <div ></div>
+    <img ng-src="{{ product.product_image }}" alt="" />
+  </div>
+
+  <hr>
+
+  <h3>{{ product.product_name }}</h3>
+  <p>{{ product.product_price | currency }}</p>
+
+</div>
+
+</section>

@@ -5,8 +5,8 @@ let express = require('express'),
     session = require('express-session'),
     // passport = require('passport'),
     // FacebookStrategy = require('passport-facebook').Strategy,
-    port = process.env.PORT || 2000;
-
+    // port = process.env.PORT || 2000;
+    port = 2000;
 
 // TODO Setup localAuth for admin and possible user if you want to do user logins
 
@@ -25,7 +25,7 @@ app.use(cors());
 app.use(express.static(__dirname + '/public'));
 
 ////////ENDPOINTS////////
-let endpoints = ['customers', 'products', 'orders', 'order_details', 'letter_templates'];
+let endpoints = ['customers', 'products', 'orders', 'order_details', 'templates'];
 
 endpoints.forEach(endpoint => {
   app.post(`/api/${endpoint}/`, restCtrl.create(endpoint));

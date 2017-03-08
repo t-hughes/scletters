@@ -6,12 +6,6 @@
         <!-- Mobile ready -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Santa Letters</title>
-        <!-- Favicon -->
-        <link rel="icon" href="img/favicon.ico">
-        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png"/>
-        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-iphone-retina.png"/>
-        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-ipad.png"/>
-        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-iphone.png"/>
         <!-- Normalize CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
         <!-- Angular Material -->
@@ -25,7 +19,6 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
         <!--CSS-->
-        <link rel="stylesheet" href="css/responsive.css"/>
         <link rel="stylesheet" href="css/styles.css"/>
 
 
@@ -35,12 +28,110 @@
     <body>
 
 
+<!-- NAV START -->
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2 md-header-title flex>Santa Letters</h2>
+        <md-button ui-sref="letterTemplates" class="md-tools">Letter Workshop</md-button>
+        <md-button ui-sref="santasShop" class="md-tools">Santa's Shop</md-button>
+        <md-button ui-sref="about" class="md-tools">About</md-button>
+        <md-button ui-sref="contact" class="md-tools">Contact Us</md-button>
+        <md-button ui-sref="userCart" class="md-tools cart-icon-btn" aria-label="Shopping Cart"><i class="fa fa-gift" aria-hidden="true"></i>
+        </md-button>
+    </div>
+</md-toolbar>
+<!-- NAV END -->
 
-<div ui-view name="nav"></div>
+<div ui-view></div>
 
-<div ui-view name="content"></div>
+<!-- FOOTER START -->
+<footer class="footer">
+    <div layout="row" layout-xs="column" layout-align="space-around">
+        <div flex="10">
+                <h5 class="footer-title">Company</h5>
+                <nav>
+                    <ul>
+                        <li>
+                            <a ui-sref="home">Home</a></li>
+                        <li>
+                            <a ui-sref="letterTemplates">Letter Workshop</a>
+                        </li>
+                        <li>
+                            <a ui-sref="santasShop">Santa's Shop</a>
+                        </li>
+                        <li>
+                            <a ui-sref="about">About</a>
+                        </li>
+                    </ul>
+                </nav>
+        </div>
+        <div flex="10">
+                <h5 class="footer-title"> Support</h5>
+                <nav>
+                    <ul>
+                        <li>
+                            <a ui-sref="contact">Contact Us</a>
+                        </li>
+                        <li>
+                            <a ui-sref="howItWorks">How it works</a>
+                        </li>
+                        <li>
+                            <a href="policies">Policies</a>
+                        </li>
+                    </ul>
+                </nav>
+        </div>
+        <!-- TODO: If wanted - bring in company's latest tweets -->
+        <div flex="10">
+                <h5 class="footer-title">Latest News</h5>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i> <b>News Title</b> lorem ipsum lorem ipsum lorem ipsum...
+                            </a>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i> <b>News Title</b> lorem ipsum lorem ipsum lorem ipsum...
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+        </div>
+        <div flex="10">
+                <h5 class="footer-title">Follow us on</h5>
+                <nav>
+                    <a href="https://www.facebook.com/SCLetters/?fref=ts" class="footer-social-btn" target="_blank">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
 
-<div ui-view name="footer"></div>
+                    <a href="#" class="footer-social-btn" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="footer-social-btn" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </nav>
+        </div>
+    </div>
+    <div layout="row" layout-margin layout-align="start end">
+        <div class="copyright" flex="85">
+            &copy; 2017 Santa Letters
+        </div>
+
+        <div class="footer-logo" flex="15">
+            Made in Utah<img class="mtn-logo" src="imgs/mtnlogo.svg" /> By <a href="http://www.talonhughes.com" target="_blank">Talon Hughes</a>
+        </div>
+    </div>
+</footer>
+<!-- FOOTER END -->
+
+<!-- FOOTER END -->
+
+
 
 
         <!-- JQUERY CDN -->
@@ -59,18 +150,15 @@
 
         <!-- Scripts -->
         <script src="js/app.js"></script>
-        <script src="js/controllers/navbarCtrl.js"></script>
+        <!-- Controllers -->
         <script src="js/controllers/carouselCtrl.js"></script>
-        <script src="js/controllers/letterTemplateCtrl.js"></script>
-        <script src="js/controllers/letterPersonalizationCtrl.js"></script>
+        <script src="js/controllers/letterTemplatesCtrl.js"></script>
         <script src="js/controllers/santasShopCtrl.js"></script>
-        <script src="js/controllers/productDetailsCtrl.js"></script>
-        <script src="js/controllers/userCartCtrl.js"></script>
-        <script src="js/services/letterPersonalizationSrv.js"></script>
-        <script src="js/services/letterTemplateSrv.js"></script>
+        <!-- Services -->
+        <script src="js/services/letterTemplatesSrv.js"></script>
         <script src="js/services/santasShopSrv.js"></script>
-        <script src="js/services/userCartSrv.js"></script>
-        <script src="js/directives/navbarScrollDir.js"></script>
+        <!-- Directives -->
+        <!-- <script src="js/directives/navbarScrollDir.js"></script> -->
         <script src="js/directives/lightboxDir.js"></script>
 
         <!-- Forces page to load at top when refreshed -->
