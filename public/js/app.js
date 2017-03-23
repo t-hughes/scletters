@@ -1,4 +1,4 @@
-var app = angular.module('santaLettersApp', ['ui.router', 'ngMaterial', 'ngAnimate', 'ngSanitize', 'ngMessages']);
+var app = angular.module('santaLettersApp', ['ui.router', 'ngMaterial', 'ngAnimate', 'ngSanitize', 'ngMessages', 'md-steppers']);
 
 app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
 
@@ -46,5 +46,6 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
     });
 
     // UI ROUTER END//
+
 
 });

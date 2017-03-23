@@ -11,6 +11,9 @@
         <!-- Angular Material -->
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
 
+
+
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -31,7 +34,7 @@
 <!-- NAV START -->
 <md-toolbar>
     <div class="md-toolbar-tools">
-        <h2 md-header-title flex>Santa Letters</h2>
+        <h2 md-header-title flex ui-sref="home">Santa Letters</h2>
         <md-button ui-sref="letterTemplates" class="md-tools">Letter Workshop</md-button>
         <md-button ui-sref="santasShop" class="md-tools">Santa's Shop</md-button>
         <md-button ui-sref="about" class="md-tools">About</md-button>
@@ -148,8 +151,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
 
 
+
+
         <!-- Scripts -->
         <script src="js/app.js"></script>
+        <script src="js/md-stepper.js"></script>
         <!-- Controllers -->
         <script src="js/controllers/carouselCtrl.js"></script>
         <script src="js/controllers/letterTemplatesCtrl.js"></script>
@@ -160,6 +166,11 @@
         <!-- Directives -->
         <!-- <script src="js/directives/navbarScrollDir.js"></script> -->
         <script src="js/directives/lightboxDir.js"></script>
+
+
+
+
+
 
         <!-- Forces page to load at top when refreshed -->
         <script>
