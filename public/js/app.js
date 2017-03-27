@@ -1,4 +1,4 @@
-var app = angular.module('santaLettersApp', ['ui.router', 'ngMaterial', 'ngAnimate', 'ngSanitize', 'ngMessages', 'md-steppers']);
+var app = angular.module('santaLettersApp', ['ui.router', 'ngMaterial', 'ngAnimate', 'ngSanitize', 'ngMessages', 'ngTextTruncate']);
 
 app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
 

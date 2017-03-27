@@ -1,66 +1,15 @@
-app.controller('letterTemplatesCtrl', function($scope, $q, $timeout) {
+app.controller('letterTemplatesCtrl', function($scope, letterTemplatesSrv) {
 
-    var vm = this;
+    $scope.getAllTemplates = letterTemplatesSrv.getAllTemplates().then(function(response) {
+        $scope.templates = response.data;
+    });
 
-    vm.selectedStep = 0;
-    vm.stepProgress = 1;
-    vm.maxStep = 3;
-    vm.showBusyText = false;
-    vm.stepData = [
-        {
-            step: 1,
-            completed: false,
-            optional: false,
-            data: {}
-        }, {
-            step: 2,
-            completed: false,
-            optional: false,
-            data: {}
-        }, {
-            step: 3,
-            completed: false,
-            optional: false,
-            data: {}
-        }
-    ];
+    //Changes tempalte border to red when select button is clicked
+    $scope.activeTemplate = function(index) {
+        $scope.isSelected = index;
+    };
 
-    vm.enableNextStep = function nextStep() {
-        //do not exceed into max step
-        if (vm.selectedStep >= vm.maxStep) {
-            return;
-        }
-        //do not increment vm.stepProgress when submitting from previously completed step
-        if (vm.selectedStep === vm.stepProgress - 1) {
-            vm.stepProgress = vm.stepProgress + 1;
-        }
-        vm.selectedStep = vm.selectedStep + 1;
-    }
-
-    vm.moveToPreviousStep = function moveToPreviousStep() {
-        if (vm.selectedStep > 0) {
-            vm.selectedStep = vm.selectedStep - 1;
-        }
-    }
-
-    vm.submitCurrentStep = function submitCurrentStep(stepData, isSkip) {
-        var deferred = $q.defer();
-        vm.showBusyText = true;
-        console.log('On before submit');
-        if (!stepData.completed && !isSkip) {
-            //simulate $http
-            $timeout(function() {
-                vm.showBusyText = false;
-                console.log('On submit success');
-                deferred.resolve({status: 200, statusText: 'success', data: {}});
-                //move to next step when success
-                stepData.completed = true;
-                vm.enableNextStep();
-            }, 1000)
-        } else {
-            vm.showBusyText = false;
-            vm.enableNextStep();
-        }
-    }
+    // Truncated letter template content
+    $scope.longText1 = "Dear (name), Ho Ho Ho! Merry Christmas! The Elves and I are busy making presents for all of the good boys and girls around the world. You have been such a good (boy/girl) this year, so I wanted to take a minute to write you a letter. I’ve made my Naughty and Nice list, and I’ve checked it twice. You are on my Nice List! I am so happy that you have been such a good (boy/girl) this year.I heard from my secret messenger that you want (What do they want for Christmas?) for Christmas this year. Because you have been so good, the Elves and I have prepared a special present for you to open on Christmas Morning. Can you do me a favor? I want you to try really hard to (insert something that the child needs to work on). If you can do that for me, then I will be very happy and might bring you an extra treat on Christmas Morning. By the time I get to your house in (location), I am going to be very hungry. Would you leave some cookies and milk out for me? Chocolate Chip cookies are my favorite, but I love all kinds of cookies! Well I need to get back to my workshop and help the Elves. Keep up the good work (Name) and have a Very Merry Christmas! Ho Ho Ho, Santa Claus";
 
 });
