@@ -29,6 +29,12 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
         controller: 'letterTemplatesCtrl'
     })
 
+    .state('letterPersonalization', {
+        url: '/letterPersonalization',
+        templateUrl: 'partials/letterPersonalization.html',
+        controller: 'letterTemplatesCtrl'
+    })
+
     .state('santasShop', {
         url: '/santasShop',
         templateUrl: 'partials/santasShop.html',

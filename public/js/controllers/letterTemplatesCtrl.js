@@ -10,4 +10,11 @@ app.controller('letterTemplatesCtrl', function($scope, letterTemplatesSrv) {
     };
 
 
+    //Saves users template selection on the service and carries it to the next step - Letter Personalization
+    $scope.saveTemplateSelection = function(data) {
+  console.log(data);
+  letterTemplatesSrv.saveTemplateSelection(data);
+};
+
+
 });

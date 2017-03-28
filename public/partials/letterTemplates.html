@@ -14,11 +14,14 @@
             <div class="template-chooser" ng-class="{'selected-template':isSelected === $index}">
                 <span class="template-title">{{template.template_name}}</span>
                 <p class="template-content" ng-text-truncate="template.template_text" ng-tt-chars-threshold="40"></p>
-                <md-button class="md-raised md-primary template-chooser-btn" ng-click="addProductToCart(product); activeTemplate($index)">Select</md-button>
+                <md-button class="md-raised md-primary template-chooser-btn" ng-click="saveTemplateSelection({templateSelection: template}); activeTemplate($index)">Select</md-button>
             </div>
         </div>
     </div>
-
+    
+    <div layout="row" layout-xs="column" layout-padding layout-margin layout-align="center center">
+        <md-button class="md-raised md-primary" ui-sref="letterPersonalization">To Letter Personalization</md-button>
+    </div>
 </section>
 
 
