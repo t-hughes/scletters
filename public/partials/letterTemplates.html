@@ -12,124 +12,13 @@
     <div layout="row" layout-xs="column" layout-padding layout-margin layout-align="center center">
         <div flex ng-repeat="template in templates">
             <div class="template-chooser" ng-class="{'selected-template':isSelected === $index}">
-                    <span class="template-title">{{template.template_name}}</span>
-                    <p class="template-content" ng-text-truncate="longText1"
-   ng-tt-chars-threshold="40"></p>
-                    <md-button class="md-raised md-primary template-chooser-btn" ng-click="addProductToCart(product); activeTemplate($index)">Select</md-button>
+                <span class="template-title">{{template.template_name}}</span>
+                <p class="template-content" ng-text-truncate="template.template_text" ng-tt-chars-threshold="40"></p>
+                <md-button class="md-raised md-primary template-chooser-btn" ng-click="addProductToCart(product); activeTemplate($index)">Select</md-button>
             </div>
         </div>
     </div>
 
-
-
-
-    <md-content layout="row" layout-padding layout-margin layout-align="center">
-        <form name="projectForm">
-
-            <div layout="row">
-                <md-input-container flex="50">
-                    <label>Child's Name</label>
-                    <input required="" name="childsName" ng-model="project.childsName">
-                    <div ng-messages="projectForm.childsName.$error">
-                        <div ng-message="required">This is required.</div>
-                    </div>
-                </md-input-container>
-
-                <md-input-container flex="50">
-                    <label>Child's Gender</label>
-                    <md-select required="" name="type" ng-model="project.childsGender">
-                        <md-option value="Girl">Girl</md-option>
-                        <md-option value="Boy">Boy</md-option>
-                        <md-option value="Kid">Kid</md-option>
-                    </md-select>
-                </md-input-container>
-            </div>
-
-            <md-input-container class="md-block">
-                <label>A gift they have asked for</label>
-                <input required="" name="childGift" ng-model="project.childGift">
-
-                <div ng-messages="projectForm.childGift.$error" role="alert">
-                    <div ng-message="required">This is required.</div>
-                </div>
-            </md-input-container>
-
-            <md-input-container class="md-block">
-                <label>Something the child needs to work on</label>
-                <input required="" name="childImprove" ng-model="project.childImprove">
-
-                <div ng-messages="projectForm.childImprove.$error">
-                    <div ng-message="required">This is required.</div>
-                </div>
-            </md-input-container>
-
-            <div layout="row">
-                <md-input-container flex="50">
-                    <label>Child's City</label>
-                    <input required="" name="childCity" ng-model="project.childCity">
-
-                    <div ng-messages="projectForm.childCity.$error">
-                        <div ng-message="required">This is required.</div>
-                    </div>
-                </md-input-container>
-
-                <md-input-container flex="50">
-                    <label>Letter Template</label>
-                    <md-select required="" name="type" ng-model="project.childsGender">
-                        <md-option value="Letter Template 1">Template 1</md-option>
-                        <md-option value="Letter Template 2">Template 2</md-option>
-                        <md-option value="Letter Template 3">Template 3</md-option>
-                        <md-option value="Letter Template 4">Template 4</md-option>
-                    </md-select>
-                </md-input-container>
-            </div>
-
-            <div>
-                <md-button type="submit">Submit</md-button>
-            </div>
-
-        </form>
-    </md-content>
-
-    <!-- <div ng-controller="letterTemplateCtrl" class="letterTemplateTabs" layout="row" layout-align="center">
-    <md-content class="md-padding">
-        <md-tabs md-selected="selectedIndex" md-border-bottom="" md-center-tabs md-dynamic-height="">
-          <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
-            <div class="letter tab{{$index%4}}" style="padding: 25px; text-align: justify;">
-              <div class="letter-head" ng-bind="tab.letterHeader"></div>
-              <br />
-              <div  ng-bind="tab.paragraphOne"></div>
-              <br />
-              <div  ng-bind="tab.paragraphTwo"></div>
-              <br />
-              <div  ng-bind="tab.paragraphThree"></div>
-              <br />
-              <div  ng-bind="tab.paragraphFour"></div>
-              <br />
-              <div ng-bind="tab.letterFooter"></div>
-              <br />
-              <div ng-bind="tab.letterSigning"></div>
-          </md-tab>
-
-          <div class="product-quantity">
-              <label for="product-quantity-input" class="product-quantity-label">Qty</label>
-              <div class="product-quantity-subtract">
-                  <i class="fa fa-chevron-left"></i>
-              </div>
-              <div>
-                  <input type="text" id="product-quantity-input" placeholder="0" value="0" />
-              </div>
-              <div class="product-quantity-add">
-                  <i class="fa fa-chevron-right"></i>
-              </div>
-          </div>
-      </div>
-        </md-tabs>
-
-        <button class="to-home-btn green" ui-sref="home"><i class="ion-android-arrow-back"></i><span>Home</span></button>
-        <button class="to-letterPersonalization-btn red" ui-sref="letterPersonalization"><span>Letter Personalization</span><i class="ion-android-arrow-forward"></i></button>
-    </md-content>
-</div> -->
 </section>
 
 
