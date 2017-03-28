@@ -117,6 +117,14 @@ body, html {
   float: right;
 }
 
+.cart-badge {
+    color: #FFF;
+    font-size: 18px;
+    top: -13px;
+    position: absolute;
+    transition: .2s all ease-in-out;
+}
+
 /*HEADER/TOOLBAR END*/
 
 /*//////////////////////////////*/

@@ -1,22 +1,24 @@
 <section>
     <div class="section-title-wrapper">
         <h2 class="section-title">Santa's Shop</h2>
-    <div class="separator separator-red">✻</div>
+        <div class="separator separator-red">✻</div>
         <p class="section-description">See all items below.</p>
     </div>
 
-    <div  ng-repeat="product in products">
 
-  <div >
-    <div ></div>
-    <img ng-src="{{ product.product_image }}" alt="" />
-  </div>
+    <div layout="row" layout-xs="column" layout-padding layout-margin layout-align="center center">
+        <div ng-repeat="product in products | filter: searchProduct" ui-sref="productDetails({id: product.product_id})">
 
-  <hr>
+            <div>
+                <div></div>
+                <img ng-src="{{ product.product_image }}" alt="" />
+            </div>
 
-  <h3>{{ product.product_name }}</h3>
-  <p>{{ product.product_price | currency }}</p>
+            <hr>
 
-</div>
+            <h3>{{ product.product_name }}</h3>
+            <p>{{ product.product_price | currency }}</p>
+        </div>
+    </div>
 
 </section>

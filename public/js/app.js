@@ -41,6 +41,18 @@ app.config(function($urlRouterProvider, $stateProvider, $mdThemingProvider) {
         controller: 'santasShopCtrl'
     })
 
+    .state('productDetails', {
+        url: '/productDetails/:id',
+        templateUrl: 'partials/productDetails.html',
+        controller: 'productDetailsCtrl'
+    })
+
+    .state('userCart', {
+        url: '/userCart',
+        templateUrl: 'partials/userCart.html',
+        controller: 'userCartCtrl'
+    })
+
     .state('about', {
         url: '/about',
         templateUrl: 'partials/about.html'

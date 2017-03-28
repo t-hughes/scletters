@@ -28,7 +28,7 @@
 
 
     </head>
-    <body>
+    <body ng-controller="userCartCtrl">
 
 
 <!-- NAV START -->
@@ -39,7 +39,7 @@
         <md-button ui-sref="santasShop" class="md-tools">Santa's Shop</md-button>
         <md-button ui-sref="about" class="md-tools">About</md-button>
         <md-button ui-sref="contact" class="md-tools">Contact Us</md-button>
-        <md-button ui-sref="userCart" class="md-tools cart-icon-btn" aria-label="Shopping Cart"><i class="fa fa-gift" aria-hidden="true"></i>
+        <md-button ui-sref="userCart" class="md-tools cart-icon-btn" aria-label="Shopping Cart"><i class="fa fa-gift" aria-hidden="true"></i><span class="cart-badge" ng-if="cart.length >= 1">{{cartQty()}}</span>
         </md-button>
     </div>
 </md-toolbar>
@@ -159,9 +159,12 @@
         <script src="js/controllers/carouselCtrl.js"></script>
         <script src="js/controllers/letterTemplatesCtrl.js"></script>
         <script src="js/controllers/santasShopCtrl.js"></script>
+        <script src="js/controllers/productDetailsCtrl.js"></script>
+        <script src="js/controllers/userCartCtrl.js"></script>
         <!-- Services -->
         <script src="js/services/letterTemplatesSrv.js"></script>
         <script src="js/services/santasShopSrv.js"></script>
+        <script src="js/services/userCartSrv.js"></script>
         <!-- Directives -->
         <!-- <script src="js/directives/navbarScrollDir.js"></script> -->
         <script src="js/directives/lightboxDir.js"></script>
