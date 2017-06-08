@@ -7,24 +7,15 @@ app.service('letterTemplatesSrv', function($http) {
         });
     };
 
-    var order = [];
-
-    this.getOrderData = function() {
-      return order;
-    };
+    var savedData = [];
 
     this.saveTemplateSelection = function(data) {
-      if(order[0]) {
-          order.splice(0, 1, data);
+      if(savedData[0]) {
+          savedData.splice(0, 1, data);
       } else {
-    order.push(data);
+    savedData.push(data);
     }
-    return order;
-    };
-
-    this.saveOrderData = function(data) {
-      order.push(data);
-      console.log('SAVED TO SERVICE...', order);
+    return savedData;
     };
 
 });
